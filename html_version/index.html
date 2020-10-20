@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <form action="">
+        <p>Добрый день! Закончено внедрение сервиса Рассылок РТУ МИРЭА.
+            В социальной сети ВКонтакте в формате сообщений от группы УВиСР тебе будут оперативно приходить важные уведомления от администрации вуза и анонсы по твоим интересам.
+            В том формате и в то время, которые тебе удобны, и только по тем интересам, которые ты укажешь.
+            Для его подключения обязательно заполни анкету ниже.
+        </p>
+
+        <label>Согласен(-а) получать #важные объявления Университета (приказы, собрания и т.п.)?</label><br>
+        <input type="radio" id="agreement_for_important" name="agreement_for_important" value="yes" checked>
+        <label for="agreement_for_important">Да</label><br>
+
+<!--        социальное-->
+        <p>Отметь интересные тебе социальные сферы Университета</p>
+        <input type="checkbox" id="social_scholarships" name="social_scholarships" value="yes">
+        <label for="social_scholarships">Стипендии</label><br>
+        <input type="checkbox" id="social_dormitory" name="social_dormitory" value="yes">
+        <label for="social_dormitory">Общежития</label><br>
+        <input type="checkbox" id="social_mobility" name="social_mobility" value="yes">
+        <label for="social_mobility">Академическая мобильность (учёба заграницей и т.п.)</label><br>
+        <input type="checkbox" id="social_blood_donation" name="social_blood_donation" value="yes">
+        <label for="social_blood_donation">Донорство</label><br>
+        <input type="checkbox" id="social_news" name="social_news" value="yes">
+        <label for="social_news">Новости о жизни Университета</label><br>
+
+<!--        внеучебное-->
+        <p>Отметь интересные тебе сферы внеучебной деятельности</p>
+        <input type="checkbox" id="extra_science" name="extra_science" value="yes">
+        <label for="extra_science">Наука</label><br>
+        <input type="checkbox" id="extra_event_management" name="extra_event_management" value="yes">
+        <label for="extra_event_management">Организация мероприятий</label><br>
+        <input type="checkbox" id="extra_sport" name="extra_sport" value="yes">
+        <label for="extra_sport">Спорт</label><br>
+        <input type="checkbox" id="extra_cybersport" name="extra_cybersport" value="yes">
+        <label for="extra_cybersport">Киберспорт</label><br>
+        <input type="checkbox" id="extra_art" name="extra_art" value="yes">
+        <label for="extra_art">Творчество</label><br>
+        <input type="checkbox" id="extra_media" name="extra_media" value="yes">
+        <label for="extra_media">Медиасфера (фото, видео, текст, дизайн)</label><br>
+        <input type="checkbox" id="extra_travel" name="extra_travel" value="yes">
+        <label for="extra_travel">Путешествия</label><br>
+        <input type="checkbox" id="extra_psychology" name="extra_psychology" value="yes">
+        <label for="extra_psychology">Психология</label><br>
+        <input type="checkbox" id="extra_self_development" name="extra_self_development" value="yes">
+        <label for="extra_self_development">Саморазвитие (софт и хард скиллы)</label><br>
+        <input type="checkbox" id="extra_unions" name="extra_unions" value="yes">
+        <label for="extra_unions">Отряды (педагогические, профориентационный, МЧС и т.д.)</label><br>
+        <input type="checkbox" id="extra_volunteering" name="extra_volunteering" value="yes">
+        <label for="extra_volunteering">Волонтёрство</label><br>
+        <input type="checkbox" id="extra_politics" name="extra_politics" value="yes">
+        <label for="extra_politics">Политика</label><br>
+        <input type="checkbox" id="extra_work" name="extra_work" value="yes">
+        <label for="extra_work">Работа и стажировки</label><br>
+        <input type="checkbox" id="extra_languages" name="extra_languages" value="yes">
+        <label for="extra_languages">Изучение иностранных языков</label><br>
+        <input type="checkbox" id="extra_entertainment" name="extra_entertainment" value="yes">
+        <label for="extra_entertainment">Досуг и развлечения</label><br>
+        <input type="checkbox" id="extra_board_games" name="extra_board_games" value="yes">
+        <label for="extra_board_games">Настольные игры</label><br>
+
+<!--        достижения-->
+        <p>Кратко опиши свои достижения в выбранных выше сферах, если такие есть:</p>
+        <textarea rows="5" cols="50" name="achievements"></textarea>
+
+<!--        языковые курсы, инновац проекты-->
+<!--        научное-->
+        <p>Отметь интересные тебе научные форматы</p>
+        <input type="checkbox" id="science_conferences" name="science_conferences" value="yes">
+        <label for="science_conferences">Конференции и форумы</label><br>
+        <input type="checkbox" id="science_competitions" name="science_competitions" value="yes">
+        <label for="science_competitions">Хакатоны, олимпиады и другие соревнования</label><br>
+        <input type="checkbox" id="science_teaching" name="science_teaching" value="yes">
+        <label for="science_teaching">Преподавание (ты другим)</label><br>
+        <input type="checkbox" id="science_projects" name="science_projects" value="yes">
+        <label for="science_projects">Предпринимательство, бизнес и ведение проектов</label><br>
+        <input type="checkbox" id="science_learning" name="science_learning" value="yes">
+        <label for="science_learning">Профессиональные учебные материалы (курсы и т.п.)</label><br>
+        <input type="checkbox" id="science_popular" name="science_popular" value="yes">
+        <label for="social_scholarships">Научно-популярные материалы</label><br>
+
+<!--        новые сферы-->
+        <p>Есть сферы, которые тебе интересны, но мы не охватили выше? Какие?</p>
+        <textarea rows="2" cols="50" name="achievements"></textarea>
+
+<!--        частота-->
+        <p>Рассылка по #важное будет приходить ежедневно в 20:00 по Москве.</p>
+        <p>Как часто тебе будет удобно получать Рассылку по своим интересам?</p>
+
+        <input type="radio" id="every_day" name="gender" value="every_day" checked>
+        <label for="every_day">Каждый день</label><br>
+        <input type="radio" id="three_in_week" name="gender" value="three_in_week">
+        <label for="three_in_week">Три раза в неделю</label><br>
+        <input type="radio" id="once_in_week" name="gender" value="once_in_week">
+        <label for="once_in_week">Раз в неделю по</label>
+
+        <select name = "dropdown">
+            <option value = "mon">понедельникам</option>
+            <option value = "tue">вторникам</option>
+            <option value = "wed">средам</option>
+            <option value = "thu">четвергам</option>
+            <option value = "fri">пятницам</option>
+            <option value = "sat">субботам</option>
+            <option value = "sun" selected>воскресеньям</option>
+        </select>
+
+<!--        время-->
+        <br>
+        <label>Получать Рассылку по интересам тебе удобно в </label>
+        <select name = "dropdown">
+            <option value = "8" selected>8:00</option>
+            <option value = "12" selected>12:30</option>
+            <option value = "18" selected>18:00</option>
+            <option value = "22">22:00</option>
+        </select>
+        <br>        <br>
+<!--        <input type="submit" value="Submit">-->
+
+        <br>        <br>
+        <a>Для отправки анкеты нажми ниже  кнопку «Получать уведомления», авторизируйся в ВКонтакте во всплывшем окне и после нажми «Разрешить сообщения». Если кнопка называется «Запретить уведомления», сначала нажми её.</a>
+        <div id="vk_send_message"></div>
+        <br>
+        <a href="http://">У меня нет профиля ВКонтакте.</a> В этом случае мы не сможем присылать тебе Рассылку, но сохраним твои интересы и обязательно придумаем что-нибудь в будущем.
+
+        <p>Спасибо за заполение! Оставить отзывы и предложения можно здесь (ссылка). Если же понадобиться отписаться от Рассылки или изменить свои интересы, ты можешь сделать это в </p>
+    </form>
+
+
+<!--        скрипт подписки на сообщения группы УВиСР-->
+    <script type="text/javascript">
+        VK.Widgets.AllowMessagesFromCommunity("vk_send_message", {height: 30}, 42869722);
+
+        VK.Observer.subscribe("widgets.allowMessagesFromCommunity.allowed", function f(userId) {
+            console.log(userId);
+            console.log("allowed");
+        });
+
+        VK.Observer.subscribe("widgets.allowMessagesFromCommunity.denied", function f(userId) {
+            console.log(userId);
+            console.log("denied");
+        });
+
+    </script>
+
+</body>
+</html>
