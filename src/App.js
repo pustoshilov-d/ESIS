@@ -25,12 +25,14 @@ import MineForm from './elements/MineForm';
 import "./App.css"
 import "../node_modules/react-widgets/dist/css/react-widgets.css"
 import {FormItem} from "@vkontakte/vkui";
+import Snackbar from "@vkontakte/vkui/dist/components/Snackbar/Snackbar";
 
 const App = () => {
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+	const [deleteAlert, setDeleteAlert] = useState(null)
 
-
+	//
 	// constructor() {
 	// 	this.state = {
 	// 		activePanel: 'list',
@@ -44,10 +46,22 @@ const App = () => {
 		async function fetchData() {
 			const user = await bridge.send('VKWebAppGetUserInfo');
 			setUser(user);
-
 		}
 		fetchData();
 	}, []);
+
+	const openBase = () => {
+		if (this.state.snackbar) return;
+		this.setState({ snackbar:
+				<Snackbar
+					layout="vertical"
+					onClose={() => this.setState({ snackbar: null })}
+					before={<Avatar size={24} style={blueBackground}><Icon16Done fill="#fff" width={14} height={14} /></Avatar>}
+				>
+					Уведомления о подкастах включены
+				</Snackbar>
+		});
+	}
 
 	return (
 		<View activePanel='main' popout={popout}>

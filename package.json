@@ -9,7 +9,7 @@
     "build": "npm audit fix && react-scripts build",
     "predeploy": "npm run build",
     "gcp-build": "npm run build",
-    "deploy": "gcloud app deploy app.yaml --version=0-2-2",
+    "deploy": "gcloud app deploy app.yaml --version=0-3-0",
     "git-push": "git add . && git commit -m \"push commit\" && git push rep master"
   },
   "keywords": [],
@@ -18,7 +18,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "react-hot-loader": "^4.9.0",
-    "react-scripts": "^3.4.3"
+    "react-scripts": "^3.4.4"
   },
   "dependencies": {
     "@vkontakte/icons": "^1.35.1",
