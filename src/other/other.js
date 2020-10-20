@@ -1,5 +1,9 @@
 import React from "react";
 import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
+import {FormItem} from "@vkontakte/vkui";
+import Div from "@vkontakte/vkui/dist/components/Div/Div";
+import Multiselect from "react-widgets/lib/Multiselect";
+import FormLayout from "@vkontakte/vkui/dist/components/FormLayout/FormLayout";
 
 {/*<FormLayout>*/}
 {/*    <FormStatus header="Некорректный мобильный номер" mode="error">*/}
@@ -107,3 +111,16 @@ import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
 {/*		</Button>*/}
 {/*	</Div>*/}
 {/*</Group>*/}
+
+
+// <FormItem   top="Dfe">
+//     <Div>
+//         <Multiselect
+//             data={[
+//                 'orange',
+//                 'red',
+//                 'blue',
+//                 'purple'
+//             ]}/>
+//     </Div>
+// </FormItem>

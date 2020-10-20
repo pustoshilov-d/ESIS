@@ -22,11 +22,15 @@ import Tooltip from "@vkontakte/vkui/dist/components/Tooltip/Tooltip";
 import Separator from "@vkontakte/vkui/dist/components/Separator/Separator";
 import MineForm from './elements/MineForm';
 
+import "./App.css"
+import "../node_modules/react-widgets/dist/css/react-widgets.css"
+import {FormItem} from "@vkontakte/vkui";
+
 const App = () => {
 	const [fetchedUser, setUser] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
-	//
+
 	// constructor() {
 	// 	this.state = {
 	// 		activePanel: 'list',
@@ -64,6 +68,9 @@ const App = () => {
 				</Group>}
 
 				<MineForm/>
+				<Div>
+					<Button stretched mode="destructive">Отписаться</Button>
+				</Div>
 			</Panel>
 
 		</View>
