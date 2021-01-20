@@ -63,6 +63,7 @@ const App = () => {
 		});
 	}
 
+
 	return (
 		<View activePanel='main' popout={popout}>
 			<Panel id="main">
