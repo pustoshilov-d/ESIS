@@ -50,18 +50,18 @@ const App = () => {
 		fetchData();
 	}, []);
 
-	const openBase = () => {
-		if (this.state.snackbar) return;
-		this.setState({ snackbar:
-				<Snackbar
-					layout="vertical"
-					onClose={() => this.setState({ snackbar: null })}
-					before={<Avatar size={24} style={blueBackground}><Icon16Done fill="#fff" width={14} height={14} /></Avatar>}
-				>
-					Уведомления о подкастах включены
-				</Snackbar>
-		});
-	}
+	// const openBase = () => {
+	// 	if (this.state.snackbar) return;
+	// 	this.setState({ snackbar:
+	// 			<Snackbar
+	// 				layout="vertical"
+	// 				onClose={() => this.setState({ snackbar: null })}
+	// 				before={<Avatar size={24} style={blueBackground}><Icon16Done fill="#fff" width={14} height={14} /></Avatar>}
+	// 			>
+	// 				Уведомления о подкастах включены
+	// 			</Snackbar>
+	// 	});
+	// }
 
 
 	return (
